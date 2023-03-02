@@ -1,0 +1,13 @@
+latex  DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.tex
+bibtex DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.tex
+latex  DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.tex
+latex  DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.tex
+
+dvips -o "DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.ps" DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.dvi
+
+ps2pdf DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.ps
+
+acroread DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.pdf &
+
+mv  DocumentoMestre-Trabalho-ModuloExperimental-Modelagem.ps /tmp
+

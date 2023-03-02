@@ -1,0 +1,59 @@
+________________________________________________
+                                                
+      Relatório da Amostra de Chave 2     
+________________________________________________
+
+
+Data de Cadastro ---- : 5/5/5
+Nome do Fluido -------: 5
+Base ---------------- : 5
+Teor de Base -------- : 5
+Teor de Agua -------- : 5
+    -----Propriedades Físicas e químicas-----      
+pH Mínimo ----------- : 5
+pH Máximo ----------- : 5
+Peso Específico Mínimo: 5
+Peso Específico Máximo: 5
+Temperatura de envelhecimento: 5
+Força gel inicial antes do envelhecimento: 5
+Força gel inicial depois do envelhecimento: 5
+Força gel final antes do envelhecimento: 5
+Força gel final depois do envelhecimento: 5
+Estabilidade elétrica antes do envelhecimento: 5
+Estabilidade elétrica depois do envelhecimento: 5
+Coeficiente de lubricidade: 5
+Volume de filtrado: 5
+Teor de sólidos ----- : 5
+Salinidade ---------- : 5
+    ----Propriedades Reológicas----      
+Viscosidade Aparente antes do envelhecimento: 5
+Viscosidade Aparente depois do envelhecimento: 5
+Viscosidade Plástica antes do envelhecimento: 5
+Viscosidade Plástica depois do envelhecimento: 5
+    ----Aditivos----      
+Adensante ----------- : 5
+Concentração de Adensante ---------- : 5
+Inibidor de Formações Ativas ------- : 5
+Concentração do Inibidor de Formações Ativas ---------- : 5
+Redutor de Filtrado - : 5
+Concentração do Redutor de Filtrado ---------- : 5
+Biopolimero - : 5
+Concentração do Biopolimero ---------- : 5
+Viscosificante - : 5
+Concentração do Viscosificante---------- : 5
+Dispersante - : 5
+Concentração do Dispersante---------- : 5
+Defloculante - : 5
+Concentração do Defloculante---------- : 5
+Emulsificante - : 5
+Concentração do Emulsificante---------- : 5
+Biocida - : 5
+Concentração do Biocida---------- : 5
+Lubrificante - : 5
+Concentração do Lubrificante---------- : 5
+Inibidor de corrosão - : 5
+Concentração do Inibidor de Corrosão---------- : 5
+Controlador de pH - : 5
+Concentração do Controlador de pH---------- : 5
+
+
