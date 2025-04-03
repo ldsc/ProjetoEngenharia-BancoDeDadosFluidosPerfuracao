@@ -1,0 +1,112 @@
+chave:
+0
+INSTRUMENT CONTROL PARAMETERS:    GC_FID
+----------------------------------------
+:D
+   C:\MSDCHEM\1\METHODS\WHOLE OIL.M
+      Tue Jan 21 19:11:31 2014
+
+Control Information
+------- -----------
+
+Sample Inlet      :  GC
+Injection Source  :  GC ALS
+
+
+ No Sample Prep method has been assigned to this method.
+
+=============================================================================
+                                 6890 GC METHOD
+=============================================================================
+
+OVEN
+   Initial temp:  40 C (On)                Maximum temp:  325 C
+   Initial time:  1,00 min                 Equilibration time:  0,00 min
+   Ramps:
+     #   Rate  Final temp  Final time
+     1   6,00      310       19,00
+     2    0 (Off)
+   Post temp:  40 C
+   Post time:  0,00 min
+   Run time:  65,00 min
+
+FRONT INLET (SPLIT/SPLITLESS)           BACK INLET (UNKNOWN)
+   Mode:  Splitless
+   Initial temp:  290 C (On)
+   Pressure:  9,8 psi (On)
+   Purge flow:  50,0 mL/min
+   Purge time:  1,50 min
+   Total flow:  54,9 mL/min
+   Gas saver:  On
+   Saver flow:  20,0 mL/min
+   Saver time:  3,00 min
+   Gas type:  Helium
+
+COLUMN 1                                COLUMN 2
+   Capillary Column                        (not installed)
+   Max temperature:  325 C
+   Nominal length:  30,0 m
+   Nominal diameter:  320,00 um
+   Nominal film thickness:  0,25 um
+   Mode:  constant flow
+   Initial flow:  2,2 mL/min
+   Nominal init pressure:  9,8 psi
+   Average velocity:  35 cm/sec
+   Inlet:  Front Inlet
+   Outlet:  Front Detector
+   Outlet pressure:  ambient
+
+FRONT DETECTOR (FID)                    BACK DETECTOR (NO DET)
+   Temperature:  320 C (On)
+   Hydrogen flow:  30,0 mL/min (On)
+   Air flow:  400,0 mL/min (On)
+   Mode:  Constant makeup flow
+   Makeup flow:  25,0 mL/min (On)
+   Makeup Gas Type: Nitrogen
+   Flame:  On
+   Electrometer:  On
+   Lit offset:  2,0
+
+SIGNAL 1                                SIGNAL 2
+   Data rate:  20 Hz                       Save Data:  Off
+   Type:  front detector
+   Save Data:  On
+
+                                        POST RUN
+                                           Post Time: 0,00 min
+
+INJECTOR 1
+   Solvent Wash Mode:  A, B
+   Sample pumps:  4
+   Sample Volume (uL):  1,000
+   Syringe size (uL):     10,0
+   Pre washes from bottle A:  2
+   Pre washes from bottle B:  2
+   Post washes from bottle A:  3
+   Post washes from bottle B:  3
+   Viscosity delay (seconds):  0
+   Pre injection dwell (min):  0,00
+   Post injection dwell (min):  0,00
+   Sample skim depth (mm):   10,0  (Off)
+   Plunger Speed:  Fast
+   Draw Speed (uL/min):  300
+   Dispense Speed (uL/min):  6000
+   Inject Speed (uL/min):  6000
+   Solv Draw Speed (uL/min): 300
+   Solv Dispense Speed (uL/min): 6000
+   Multiple Injections:  Off
+   Solvent saver:  Off
+   Normal Injection: On
+   Air gap after Layer 1 (uL): 0,200
+
+TIME TABLE
+   Time(min)      Parameter & Setpoint
+
+
+
+ Column 1 Inventory Number :  
+ Column 2 Inventory Number :  
+
+
+END OF INSTRUMENT CONTROL PARAMETERS
+------------------------------------

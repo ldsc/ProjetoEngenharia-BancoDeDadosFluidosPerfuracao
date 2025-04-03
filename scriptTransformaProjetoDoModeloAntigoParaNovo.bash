@@ -1,0 +1,10 @@
+# Script: Transforma projeto do modelo antigo para o novo
+
+mkdir tmp
+git add tmp
+git mv Codigos   tmp/Codigos
+git mv imagens   tmp/imagens
+git mv listagens tmp/listagens
+git mv lyx       tmp/lyx
+
+

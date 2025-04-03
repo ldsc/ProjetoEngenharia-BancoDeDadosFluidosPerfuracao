@@ -1,0 +1,586 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children no
+\language brazilian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Elaboração} 
+\backslash
+rhead{} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Elaboração
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Elaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Elaboração"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No processo de elaboração,
+ é realizado um estudo de abrangência do software em desenvolvimento,
+ ajustando os requisitos iniciais do sistema que foram definidos na etapa de especificação.
+ Tem-se como objetivo possibilitar o desenvolvimento de um sistema útil,
+ que atenda as necessidades do usuário e permita futuras extensões do programa.
+ 
+\end_layout
+
+\begin_layout Section
+Análise de Domínio
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Análise de Domínio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A análise de domínio é uma parte da elaboração;
+ seu objetivo é entender o domínio,
+ a abrangência do sistema a ser desenvolvido.
+ Envolve itens como estimar o reuso do software utilizando-se da criação de bibliotecas genéricas.
+ Neste ponto,
+ o analista pensa no sistema de uma forma mais genérica,
+ identificando conceitos fundamentais que podem ser reaproveitados em outros sistemas.
+\end_layout
+
+\begin_layout Standard
+Considerando que o software tem como objetivo principal a criação de um banco de dados de fluidos de perfuração desenvolvidos no Laboratório de Engenharia e Exploração de Petróleo-LENEP,
+ base óleo ou base água,
+ que contém as características de acordo com suas composições quimicas e tipos de aditivos,
+ a análise de domínio envolverá:
+\end_layout
+
+\begin_layout Itemize
+O uso dos livros de engenharia de reservatório,
+ de programação orientada a objeto,
+ de fluidos de perfuração para desenvolvimento do software.
+\end_layout
+
+\begin_layout Itemize
+Consultas a livros,
+ sites,
+ artigos,
+ monografias e dados de trabalhos de iniciação científica dos alunos do LENEP.
+\end_layout
+
+\begin_layout Itemize
+Como o programa tem interface bastante simplificada e realiza rotinas que dependem dos dados de entrada e dados armazenados,
+ a necessidade de disco rígido é proporcional ao tamanho da base de dados.
+ 
+\end_layout
+
+\begin_layout Subsection
+Banco de Dados
+\end_layout
+
+\begin_layout Standard
+Um SGBD tem que ter algumas particularidades e deve facilitar o processo de definir (especificar tipos de dados a serem armazenados),
+ construir (armazenar dados que possam ser manipulados por um SGBD) e manipular (inserir,
+ atualizar e remover base dados de diversas aplicações).
+ As principais características de um SGBD são:
+\end_layout
+
+\begin_layout Description
+- Controle de redundância:
+ pode-se construir regras para que o gerenciamento seja mais eficaz,
+ evitando assim a redundância dos dados e economizando espaço em disco.
+ Por exemplo,
+ um aluno só pode ser cadastrado uma única vez em cada curso;
+ cada disciplina só pode ser cadastrada uma vez em um único curso;
+ ou ainda,
+ cada aluno só pode se inscrever uma vez em cada matéria.
+ 
+\end_layout
+
+\begin_layout Description
+- Restrição a acesso não autorizado:
+ Em um banco de dados com vários usuários,
+ cada um tem acesso no que lhe é permitido.
+ Com um SGBD é possível restringir os acessos de cada usuário ou grupo de usuários,
+ permitido assim acessos autorizados para cada usuário.
+ 
+\end_layout
+
+\begin_layout Description
+- Garantia de armazenamento persistente:
+ Com um SGBD é possível armazenar dados de uma forma organizada.
+ 
+\end_layout
+
+\begin_layout Description
+- Garantia de armazenamento de estruturas para o processamento eficiente de consultas:
+ Uma outra característica de um SGBD é que além de armazenar dados ele deve prover mecanismo que facilitem a busca,
+ a inserção ou atualização da base de dados.
+\end_layout
+
+\begin_layout Description
+- Compartilhamento de dados:
+ SGBDs multiusuários devem fornecer controle de concorrência para assegurar que atualizações simultâneas resultem em modificações corretas.
+ 
+\end_layout
+
+\begin_layout Description
+- Fornecimento de múltiplas interfaces:
+ Devido aos vários tipos de usuários,
+ com variados níveis de conhecimento técnico,
+ um SGBD deve fornecer uma variedade de interfaces para atendê-los.
+ Os tipos de interfaces incluem linguagens de consulta para usuários ocasionais,
+ interfaces de linguagem de programação para programadores de aplicações,
+ formulários e interfaces dirigidas por menus para usuários comuns.
+ 
+\end_layout
+
+\begin_layout Description
+- Representação de relacionamento complexo entre dados:
+ Uma base de dados pode possuir uma variedade de dados que estão inter-relacionados de muitas maneiras.
+ Um SGBD deve ter a capacidade de representar uma variedade de relacionamentos complexos entre dados,
+ bem como recuperar e modificar dados relacionados de maneira fácil e eficiente.
+ 
+\end_layout
+
+\begin_layout Description
+- Backup e restauração:
+ Garantir backup e restauração de dados é tarefa essencial para qualquer SGBD.
+ Mesmo que as falhas sejam ocasionadas por falhas de software ou hardware ele deve garantir a integridade dos dados.
+ 
+\end_layout
+
+\begin_layout Description
+- Restrições de integridade:
+ Num SGBD é possível impor restrições,
+ por exemplo,
+ em uma tabela ALUNO que contém atributos:
+ Nome,
+ CPF,
+ Endereço,
+ Tel,
+ o atributo Nome possa ter no máximo 50 caracteres,
+ e que CPF pode ter 11 caracteres e que Tel pode receber 11 inteiros,
+ ou ainda,
+ a tabela Turma deve ser preenchida com dados da tabela Professor e da tabela Aluno,
+ etc.
+\end_layout
+
+\begin_layout Subsubsection
+Banco de dados orientado a objeto
+\end_layout
+
+\begin_layout Standard
+Visando acompanhar a tendência da época e também possibilitar resolver as limitações que os bancos de dados possuíam,
+ foi proposto um novo sistema de banco de dados orientados a objeto (BDOO).
+\end_layout
+
+\begin_layout Standard
+De uma forma bem simples pode-se dizer que o BDOO é nada mais que a junção entre conceitos de OO com conceiros de SGBD,
+ ou seja,
+ ele é todo baseado nos paradigmas da OO unido aos objetivos básicos dos SGBD.
+\end_layout
+
+\begin_layout Subsection
+Fluidos de Perfuração
+\end_layout
+
+\begin_layout Standard
+Os fluidos de perfuração são vistos de diferentes maneiras por diferentes autores.
+ O instituto Americano de Petróleo (API) considera fluido de perfuração qualquer fluido circulante capaz de tornar a operação de perfuração viável.
+ Autores como Thomas et al.
+ (2001) consideram os fluidos de perfuração como misturas complexas de sólidos,
+ líquidos,
+ produtos químicos e,
+ por vezes,
+ até de gases.
+\end_layout
+
+\begin_layout Standard
+Um fluido de perfuração além de ter de realizar suas funções primordiais,
+ que são a suspensão,
+ o controle de pressão,
+ a estabilização das formações,
+ apresentar poder de flutuação e de resfriamento da broca (Duarte,
+ 2004),
+ também deve apresentar características adequadas para que possam ser utilizados nas diversas formações.
+ Sendo assim,
+ um fluido de perfuração deve ser estável quimicamente,
+ facilitar a separação dos cascalhos na superfície,
+ ser inerte (não reagir) com as rochas produtoras,
+ ser capaz de aceitar tratamento físico e/ou químico,
+ ser passível de bombeamento,
+ deve apresentar baixo grau de corrosão e abrasão (esfoliamento) em relação à coluna de perfuração e a outros equipamentos da coluna de perfuração,
+ e ainda não ser agressivo ao meio ambiente (Thomas et al.,
+ 2001).
+ Além das funções cruciais de um fluido de perfuração,
+ eles apresentam funções e características secundárias,
+ tais como:
+ resfriar e limpar pequenas impurezas,
+ apresentar baixo custo de operação,
+ facilitar as interpretações geológicas do material retirado do poço,
+ dentre outras.
+\end_layout
+
+\begin_layout Standard
+Os principais componentes dos fluidos de perfuração são a base (ar,
+ água e óleo) e os aditivos químicos.
+ De acordo com a base predominante utilizada em sua preparação os fluidos são classificados em base ar,
+ água e/ou base óleo.
+ A maior parte das operações de perfuração no mundo usam fluidos (lamas) base água,
+ contra apenas cerca de 5 a 10% que utilizam fluidos base óleo e uma porção ainda menor de poços que são perfurados com fluidos base ar (Caenn,
+ 1995).
+\end_layout
+
+\begin_layout Standard
+Segundo Caenn et al (1995),
+ os aditivos mais comuns utilizados nos fluidos de perfuração são os polímeros,
+ surfactantes,
+ sais e bentonitas.
+ Pesquisas são continuamente executadas para aumentar a performance dos fluidos de perfuração e aditivos são frequentemente desenvolvidos para alterar uma ou mais propriedades da lama,
+ para que assim possa ser formulado o fluido que atenda às necessidades exigidas para cada aplicação.
+ Os principais aditivos utilizados são adensantes,
+ sais,
+ redutores de filtrado,
+ biopolímeros,
+ viscosificantes,
+ dispersantes,
+ defloculantes,
+ emulsionantes,
+ biocidas,
+ salmoura,
+ lubrificantes,
+ inibidores de corrosão e controladores de pH (Bleier,
+ 1992;
+ Economides,
+ 1998;
+ Veiga,
+ 1998;
+ Barbosa,
+ 2005;
+ Candler & Friedheim,
+ 2006).
+\end_layout
+
+\begin_layout Itemize
+Adensantes - substâncias usadas para aumentar a densidade com o intuito de controlar a pressão hidrostática do poço para prevenir a ocorrência de blowouts ou o dano à formação.
+ Qualquer substância mais densa que o fluido e que não provoque nenhum efeito adverso nas demais propriedades podem ser usadas.
+ Além do custo,
+ deve-se levar em consideração o volume ocupado pelo aditivo.
+ Os materiais mais usados com essa finalidade são Dolomita,
+ Calcita,
+ Hematita,
+ Galena e especialmente a Barita (BaSO4) (Darley& Gray,
+ 1988).
+\end_layout
+
+\begin_layout Itemize
+Viscosificantes - agentes utilizados para conferir viscosidade alta em baixo cisalhamento e viscosidade baixa em alto cisalhamento.
+ Neste caso,
+ o aditivo mais utilizado é a bentonita,
+ a qual incha em contato com a água reduzindo a fricção entre a coluna de perfuração e as paredes do poço,
+ também podem ser utilizados polímeros sintéticos como o policatiônico;
+ 
+\end_layout
+
+\begin_layout Itemize
+Biopolímero- usados no controle reológico e para melhorar o processo de carregamento de cascalhos durante a perfuração,
+ geralmente atuam tornando o fluido mais viscoso.
+ Os polímeros mais utilizados na indústria são:
+ CMC (carboximetilcelulose),
+ HEC (hidroxietilcelulose) e o CMS (carboximetilamido);
+ 
+\end_layout
+
+\begin_layout Itemize
+Sais - atuam como inibidores das formações ativas de maneira a reduzir o escoamento hidráulico para a formação,
+ além de estimular o escoamento de água da formação argilosa para o fluido de perfuração.
+ Os sais mais utilizados em fluidos de perfuração base água são:
+ cloreto de sódio (NaCl),
+ cloreto de potássio (KCl) e cloreto de cálcio (CaCl
+\begin_inset Formula $_{2}$
+\end_inset
+
+),
+ entretanto também podem ser utilizados polímeros naturais e sintéticos;
+\end_layout
+
+\begin_layout Itemize
+Salmouras - utilizada como a fase aquosa,
+ tem a função de balancear as interações dos fluidos de perfuração com argilas ou sais solúveis das formações.
+ Normalmente utiliza-se NaCl ou KCl como salmouras para fluidos à base de água e CaCl2 para fluidos sintéticos ou à base de óleo;
+\end_layout
+
+\begin_layout Itemize
+Redutores de filtrado – adicionados com o objetivo de controlar a perda de fluido,
+ atuam minimizando a penetração do fluido de perfuração na formação e promovendo a melhoria do reboco formado nas paredes do poço.
+ Geralmente utiliza-se amido,
+ bentonita,
+ lignita ou polímeros para alcançar tal finalidade;
+\end_layout
+
+\begin_layout Itemize
+Dispersantes - Os aditivos do tipo lignosulfonatos e lignito possuem a função de dispersarem os sólidos presentes nos fluidos de perfuração e,
+ por isso,
+ são conhecidos como dispersantes;
+ 
+\end_layout
+
+\begin_layout Itemize
+Defloculantes - com o intuito de prevenir a floculação dos sólidos ativos nos fluidos de perfuração utilizam-se principalmente poliacrilatos de cálcio,
+ sódio e potássio;
+ 
+\end_layout
+
+\begin_layout Itemize
+Emulsionantes - tais como os ácidos graxos e alquilados sulfonados,
+ responsáveis por formar,
+ manter e estabilizar emulsões óleo em água e água em óleo;
+\end_layout
+
+\begin_layout Itemize
+Biocidas - aditivos como glutaraldeído,
+ sais quaternários de amônio e tiocianato usados para controlar os processos fermentativos do fluido de perfuração devido à ação de microorganismos;
+ 
+\end_layout
+
+\begin_layout Itemize
+Lubrificantes - aplicados para reduzir o atrito entre a coluna de perfuração e as paredes do poço usam-se,
+ por exemplo,
+ ésteres de ácidos graxos e polipropilenoglicol;
+ 
+\end_layout
+
+\begin_layout Itemize
+Inibidores de corrosão - entram na formulação do fluido com o intuito de prevenir corrosão e descamação dos tubos e demais equipamentos de perfuração.
+ Para este fim tem-se aminas e álcoois de cadeia longa;
+ 
+\end_layout
+
+\begin_layout Itemize
+Controladores de pH – usam-se hidróxidos de sódio ou potássio,
+ ácido acético,
+ acetato e carbonato de sódio como aditivos com função principal de controlar o pH dos fluidos numa faixa preestabelecida,
+ mas também como redutores de corrosão e estabilizadores de emulsões.
+\end_layout
+
+\begin_layout Section
+Identificação de Pacotes
+\end_layout
+
+\begin_layout Standard
+Na linguagem de modelagem unificada (UML),
+ um pacote é um mecanismo de agrupamento genérico que contém classes que fazem parte de um assunto e relacionam-se por um conceito comum.
+ Em outras palavras,
+ agrupam classes que se relacionam com maior frequência.
+\end_layout
+
+\begin_layout Section
+Diagrama de Pacotes
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de pacotes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Os pacotes principais deste software são discutidos a seguir e ilustrado na figura 3.1.
+\end_layout
+
+\begin_layout Itemize
+Pacote Fluido:
+ Contém as propriedades físicas e químicas associadas aos fluidos e as diferentes características associadas ao tipo de base óleo ou água,
+ e aos aditivos.
+\end_layout
+
+\begin_layout Itemize
+Pacote Interface:
+ Contém a estrutura necessária para definição da interface do programa.
+\end_layout
+
+\begin_layout Itemize
+Pacote Banco de Dados:
+ Contém as informações dos diferentes tipos de fluidos e as propriedades relaciondas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imagens/Diagramadepacotes.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de pacotes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1629 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children no
+\language brazilian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Análise Orientada a Objeto} 
+\backslash
+rhead{} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+AOO
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+AOO
+\end_layout
+
+\end_inset
+
+ – Análise Orientada a Objeto
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Análise orientada a objeto
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:AOO"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A terceira etapa do desenvolvimento de um sistema é a Análise Orientada a Objeto (AOO).
+ A AOO utiliza algumas regras para identificar os objetos de interesse,
+ as relações entre os pacotes,
+ as classes,
+ os atributos,
+ os métodos,
+ as heranças,
+ as associações,
+ as agregações,
+ as composições e as dependências.
+ O resultado da análise é um conjunto de diagramas que identificam os objetos e seus relacionamentos.
+\end_layout
+
+\begin_layout Section
+Diagramas de Classes
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de classes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de classes é apresentado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-classe"
+nolink "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/print.pdf
+	scaleBeforeRotation
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de classes 
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-classe"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dicionário de Classes
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Dicionário-de-classes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Classe CFluidodePerfuracao:
+ representa a classe que contém informações do fluido de perfuração como seus aditivos,
+ base,
+ propriedades físicas e químicas..
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo chave:
+ representa a chave de identificação do fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo base:
+ representa o tipo de base que compõe o fluido:
+ água,
+ óleo ou gás.
+\end_layout
+
+\begin_layout Itemize
+atributo teorbase:
+ representa o teor (%) de base no fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo teoragua:
+ representa o teor (%) de água no fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo adensante:
+ representa o adensante usado podendo ser dolomita,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_adensante:
+ representa a concentração de adensante no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo inibidor_fa:
+ representa o inibidor de formações ativas (sal) usado podendo ser cloreto de sódio,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_inibidor_fa:
+ representa a concentração do sal no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo redutor_f:
+ representa o redutor de filtrado usado podendo ser amido,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_redutor_f:
+ representa a concentração do redutor de filtrado no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo biopolimero:
+ representa o biopolímero usado podendo ser carboximetilcelulose,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_biopolimero:
+ representa a concentração do biopolímero no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo viscosificante:
+ representa o controlador de viscosidade usado podendo ser bentonita,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_viscosificante:
+ representa a concentração do sal no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo dispersante:
+ representa o dispersante usado podendo ser lignosulfonatos,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_dispersante:
+ representa a concentração do dispersante no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo defloculante:
+ representa o defloculante usado podendo ser poliacrilato de cálcio,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_defloculante:
+ representa a concentração do defloculante no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo emulsificante:
+ representa o emulsificante usado podendo ser ácido graxo,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_emulsificante:
+ representa a concentração do emulsificante no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo biocida:
+ representa o biocida usado podendo ser glutaraldeído,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_biocida:
+ representa a concentração do biocida no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo lubrificante:
+ representa o lubrificante usado podendo ser ácido graxo,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_lubrificante:
+ representa a concentração do lubrificante no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo inibidor_c:
+ representa o inibidor de corrosão usado podendo ser ácidos de cadeia longa,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_inibidor_c:
+ representa a concentração do inibidor de corrosão no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo controlador_pH:
+ representa o controlador de pH usado podendo ser hidróxido de sódio,
+ por exemplo.
+\end_layout
+
+\begin_layout Itemize
+atributo conc_controlador_pH:
+ representa a concentração do controlador de pH no fluido de perfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo pH_min:
+ representa o valor inferior da faixa de pH para o fluido desenvolvido.
+\end_layout
+
+\begin_layout Itemize
+atributo pH_max:
+ representa o valor superior da faixa de pH para o fluido desenvolvido.
+\end_layout
+
+\begin_layout Itemize
+atributo pe_min:
+ representa o valor inferior da faixa de peso específico para o fluido desenvolvido.
+\end_layout
+
+\begin_layout Itemize
+atributo pe_max:
+ representa o valor superior da faixa de peso específico para o fluido desenvolvido.
+\end_layout
+
+\begin_layout Itemize
+atributo gel_i_ae:
+ representa a força gel,
+ forças atrativas elétricas dentro de um fluido de perfuração,
+ quando submetido às condições estáticas após 10 segundos e antes do envelhecimento;
+\end_layout
+
+\begin_layout Itemize
+atributo temp_e:
+ representa a temperatura de envelhecimento,
+ temperatura da estufa aquecedora na qual o fluido foi inserido numa célula de aço;
+ 
+\end_layout
+
+\begin_layout Itemize
+atributo gel_i_de:
+ representa a força gel,
+ forças atrativas elétricas dentro de um fluido de perfuração,
+ quando submetido às condições estáticas após 10 segundos e depois do envelhecimento;
+\end_layout
+
+\begin_layout Itemize
+atributo gel_f_ae:
+ representa a força gel,
+ forças atrativas elétricas dentro de um fluido de perfuração,
+ quando submetido às condições estáticas após 10 minutos e antes do envelhecimento;
+\end_layout
+
+\begin_layout Itemize
+atributo gel_f_de:
+ representa a força gel,
+ forças atrativas elétricas dentro de um fluido de perfuração,
+ quando submetido às condições estáticas após 10 minutos e depois do envelhecimento;
+\end_layout
+
+\begin_layout Itemize
+atributo est_el_ae:
+ representa a estabilidade elétrica medida pela voltagem requerida para iniciar um fluxo de corrente no fluido antes do envelhecimento.
+\end_layout
+
+\begin_layout Itemize
+atributo est_el_de:
+ representa a estabilidade elétrica medida pela voltagem requerida para iniciar um fluxo de corrente no fluido depois do envelhecimento.
+\end_layout
+
+\begin_layout Itemize
+atributo c_lubricidade:
+ representa o coeficiente de lubricidade do fluido de perfuração;
+\end_layout
+
+\begin_layout Itemize
+atributo filtrado:
+ representa o volume de filtrado obtido em análise laboratorial.
+\end_layout
+
+\begin_layout Itemize
+atributo VA_ae:
+ representa a viscosidade aparente do fluido antes do envelhecimento.
+\end_layout
+
+\begin_layout Itemize
+atributo VA_de:
+ representa a viscosidade aparente do fluido depois do envelhecimento.
+\end_layout
+
+\begin_layout Itemize
+atributo VP_ae:
+ representa a viscosidade plástica do fluido antes do envelhecimento.
+\end_layout
+
+\begin_layout Itemize
+atributo VP_de:
+ representa a viscosidade plástica do fluido depois do envelhecimento.
+\end_layout
+
+\begin_layout Itemize
+atributo LE_ae:
+ representa o limite de escoamento do fluido antes do envelhecimento.
+\end_layout
+
+\begin_layout Itemize
+atributo LE_de:
+ representa o limite de escoamento do fluido depois do envelhecimento.
+\end_layout
+
+\begin_layout Itemize
+atributo teor_solidos:
+ representa o teor (%) de sólidos presentes no fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo salinidade:
+ representa a salinidade do fluido.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CBancodeDados:
+ representa toda estrutura para o desenvolvimento e gerenciamento do banco de dados.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo int_chave:
+ inteiro que armazena uma linha do arquivo com as chaves.
+\end_layout
+
+\begin_layout Itemize
+atributo chave_aux:
+ vetor que armazena as chaves lidas no arquivo.
+\end_layout
+
+\begin_layout Itemize
+atributo item:
+ armazena os titulos e subtitulos nos arquivos com as informações dos fluidos.
+\end_layout
+
+\begin_layout Itemize
+atributo tipo:
+ 
+\end_layout
+
+\begin_layout Itemize
+atributo resposta:
+ armazena resposta do usuário.
+\end_layout
+
+\begin_layout Itemize
+atributo filtro:
+ representa o filtro a ser utilizado na pesquisa ao banco de dados.
+\end_layout
+
+\begin_layout Itemize
+atributo dia:
+ representa o dia de cadastro da amostra.
+\end_layout
+
+\begin_layout Itemize
+atributo mes:
+ representa o mês de cadasto da amostra.
+\end_layout
+
+\begin_layout Itemize
+atributo ano:
+ representa o ano de cadastro da amostra.
+\end_layout
+
+\begin_layout Itemize
+atributo num_int:
+ representa um número inteiro.
+\end_layout
+
+\begin_layout Itemize
+atributo caminho_fluido:
+ representa o caminho dos arquivos que contém as informações dos fluidos no computador.
+\end_layout
+
+\begin_layout Itemize
+atributo caminho_bd:
+ representa o caminho do banco de dados no computador.
+\end_layout
+
+\begin_layout Itemize
+atributo fluido:
+ vetor de fluidos de perfuração do tipo CFluidodePerfuração.
+\end_layout
+
+\begin_layout Itemize
+atributo fluido_aux:
+ vetor auxiliar;
+\end_layout
+
+\begin_layout Itemize
+atributo i:
+ contador.
+\end_layout
+
+\begin_layout Itemize
+atributo num:
+ representa um numero.
+\end_layout
+
+\begin_layout Itemize
+char ch:
+ representa um caracter.
+\end_layout
+
+\begin_layout Itemize
+atributo num_double:representa um número do tipo double.
+\end_layout
+
+\begin_layout Itemize
+atributo const_vazio_num_double:
+ representa um número do tipo double.
+ 
+\end_layout
+
+\begin_layout Itemize
+atributo caminho_amostra:
+ representa o caminho onde se encontra a pasta da amostra de fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo diretorio_amostra:
+ representa o caminho onde se encontra o diretorio.
+ 
+\end_layout
+
+\begin_layout Itemize
+atributo nome_amostra:
+ representa o nome da amostra.
+\end_layout
+
+\begin_layout Itemize
+atributo item_amostra:
+ faz a leitura dos títulos do arquivo .
+\end_layout
+
+\begin_layout Itemize
+atributo comando_remover_str:
+ comando para remover amostra em string.
+ 
+\end_layout
+
+\begin_layout Itemize
+atributo nome:
+ representa o nome dado pelo usuário para a amostra.
+\end_layout
+
+\begin_layout Itemize
+atributo caminho:
+ representa o caminho que se encontra a pasta da amostra de fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo linha_str:
+ representa a leitura de uma linha do arquivo.
+\end_layout
+
+\begin_layout Itemize
+atributo fin:
+ variavel de leitura do arquivo.
+\end_layout
+
+\begin_layout Itemize
+atributo fout:
+ variavel de escrita do arquivo.
+ 
+\end_layout
+
+\begin_layout Itemize
+atributo chave:
+ Vetor de chaves lidas no arquivo.
+\end_layout
+
+\begin_layout Itemize
+atributo amostra_fluido:
+ vetor de amostras 
+\end_layout
+
+\begin_layout Itemize
+atributo amostra_fluido_vec_aux:
+ vetor de amostras auxiliar.
+\end_layout
+
+\begin_layout Itemize
+atributo amostra_fluido_vec_aux_2:
+ vetor de amostras auxiliar.
+\end_layout
+
+\begin_layout Itemize
+atributo vetor_resposta:
+ vetor que armazena resposta.
+\end_layout
+
+\begin_layout Itemize
+atributo ss:
+ stringstream para conversao de inteiro para string stringstream.
+ 
+\end_layout
+
+\begin_layout Itemize
+atributo comando_remover:
+ cria comando para remover amostra para lixeira.
+\end_layout
+
+\begin_layout Itemize
+atributo comando_caminho_amostra:
+ cria comando para criar um caminho para o diretório.
+\end_layout
+
+\begin_layout Itemize
+atributo comando:
+ cria comando para criar o diretório.
+\end_layout
+
+\begin_layout Itemize
+atributo caminho_bd:
+ cria comando para criar um caminho para a pasta bd.
+\end_layout
+
+\begin_layout Itemize
+atributo linha_ss:
+ para ler a linha do arquivo.
+\end_layout
+
+\begin_layout Itemize
+atributo num_double_ss:
+ converte o double para string.
+\end_layout
+
+\begin_layout Itemize
+método Listar_fluido(vector<CFluidodePerfuracao>):
+ Lista os fluidos de perfuração.
+\end_layout
+
+\begin_layout Itemize
+método Listar_fluido(vector<CFluidodePerfuracao>,int):
+ Lista fluidos de acordo com um filtro.
+\end_layout
+
+\begin_layout Itemize
+método Exibir_fluido(int chave_):
+ Exibe um determinado fluido.
+\end_layout
+
+\begin_layout Itemize
+método Inserir_fluido():
+ Insere um fluido ao banco de dados.
+\end_layout
+
+\begin_layout Itemize
+método Excluir_amostra(int):
+ Exclui um fluido do banco de dados.
+\end_layout
+
+\begin_layout Itemize
+método Ler_fluido_basico():
+ Realiza a leitura dos arquivos referentes aos fluidos.
+\end_layout
+
+\begin_layout Itemize
+método ler_amostra_basico(int):
+ :
+ Realiza a leitura dos arquivos referentes aos fluidos filtrados.
+\end_layout
+
+\begin_layout Itemize
+método ler_informacao(int):
+ Ler informações dos fluidos.
+\end_layout
+
+\begin_layout Itemize
+método teste_vazio(double):
+ para correções de respostas do usuário e conversões.
+\end_layout
+
+\begin_layout Itemize
+método teste_vazio(string):
+ para correções de respostas do usuário e conversões.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CInterface:
+ representa a interface em modo texto do programa.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo resposta:
+ representa a resposta ao usuário referente ao menu de opções.
+\end_layout
+
+\begin_layout Itemize
+atributo item:
+ leitura do título do arquivo.
+\end_layout
+
+\begin_layout Itemize
+atributo c:
+ contador.
+ 
+\end_layout
+
+\begin_layout Itemize
+atributo comando_abrir:
+ comando para abrir um diretório.
+\end_layout
+
+\begin_layout Itemize
+atributo titulo:
+ representa os títulos que aparecerão para o usuário ao selecionar uma opção do menu.
+\end_layout
+
+\begin_layout Itemize
+atributo informacao_str:informação da amostra.
+\end_layout
+
+\begin_layout Itemize
+atributo programa:
+ recebe um comando para configurar programa.
+\end_layout
+
+\begin_layout Itemize
+atributo senha:
+ senha do administrador para configurar o programa.
+\end_layout
+
+\begin_layout Itemize
+atributo senha_confirma:
+ senha a ser confirmada inserida pelo usuário.
+\end_layout
+
+\begin_layout Itemize
+atributo ch:
+ caracter.
+\end_layout
+
+\begin_layout Itemize
+atributo amostras:
+ vetor do tipo vector<CFluidodePerfuracao> de amostras.
+\end_layout
+
+\begin_layout Itemize
+atributo vetor_resposta:
+ vetor do tipo vector<int> que armazena as respostas.
+\end_layout
+
+\begin_layout Itemize
+método inicia():
+ método para iniciar o programa.
+\end_layout
+
+\begin_layout Itemize
+método abre_DT():
+ método para abrir diretório de trabalho.
+\end_layout
+
+\begin_layout Itemize
+método abre_bd():método para abrir pasta do banco de dados.
+\end_layout
+
+\begin_layout Itemize
+método abre_relatorio(int):
+ método para abrir relatórios.
+\end_layout
+
+\begin_layout Itemize
+método ajusta_janela():
+ método para ajustar janela.
+\end_layout
+
+\begin_layout Itemize
+método limpa_janela():
+ método para limpar janela.
+\end_layout
+
+\begin_layout Itemize
+método gerenciar_usuario(CUsuario&):
+ método para gerenciar usuário (administrador e usuário comum).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CMenu:
+ representa a classe com todos menus.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo resposta:
+ representa a resposta do usuário.
+\end_layout
+
+\begin_layout Itemize
+atributo resposta_str:
+ representa a resposta do usuário convertida para string.
+\end_layout
+
+\begin_layout Itemize
+atributo ch:
+ representa um caracter.
+\end_layout
+
+\begin_layout Itemize
+atributo vetor_resposta:
+ vetor do tipo vector<int> que armazena a resposta do usuário..
+\end_layout
+
+\begin_layout Itemize
+método menu_inicio():
+ método referente ao menu de início.
+\end_layout
+
+\begin_layout Itemize
+método menu_banco_de_dados():
+ método referente ao menu que lista as funções referentes ao banco de dados.
+\end_layout
+
+\begin_layout Itemize
+método menu_exportar_dados():
+ menu referente à geração de relatórios.
+\end_layout
+
+\begin_layout Itemize
+método menu_banco_de_dados_pesquisar():
+ menu referente às opções de pesquisa.
+\end_layout
+
+\begin_layout Itemize
+método menu_filtro():
+ menu referente às opções de filtro.
+\end_layout
+
+\begin_layout Itemize
+método menu_configuracoes():
+ menu referente às opções de configurações.
+\end_layout
+
+\begin_layout Itemize
+método menu_sim_nao():
+ menu referente à resposta do usuário (sim ou não).
+\end_layout
+
+\begin_layout Itemize
+método menu_exibir_voltar():
+ menu referente às opções exibir ou voltar.
+\end_layout
+
+\begin_layout Itemize
+método menu_usuario():
+ menu oculto referente ao gerenciamento de usuário.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CRelatorio:
+ representa a classe que exporta as amostras em forma de relatório.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo chave:
+ representa a chave da amostra a ser exportada.
+\end_layout
+
+\begin_layout Itemize
+atributo int_chave:
+ representa a chave da amostra a ser exportada.
+\end_layout
+
+\begin_layout Itemize
+atributo resposta:
+ representa a resposta do usuário.
+\end_layout
+
+\begin_layout Itemize
+atributo c:
+ contador.
+\end_layout
+
+\begin_layout Itemize
+atributo v_amostra:
+ vetor do tipo vector<CFluidodePerfuracao> de amostra.
+\end_layout
+
+\begin_layout Itemize
+método exportar_amostra(int):
+ método para exportar as amostras em forma de relatório.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+CConfiguracao:
+ representa a classe que configura o explorador e o editor de texto.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo caminho_ss:
+ representa o caminho que vai receber a opção do usuário para abrir sempre ou não os diretórios.
+\end_layout
+
+\begin_layout Itemize
+atributo nome_programa:
+ nome do programa definido pelo usuário.
+\end_layout
+
+\begin_layout Itemize
+atributo nome_explorador_linux:
+ representa o explorador do GNU/linux.
+\end_layout
+
+\begin_layout Itemize
+atributo nome_explorador_windows:
+ representa o explorador do windows.
+\end_layout
+
+\begin_layout Itemize
+atributo nome_editor_texto_linux:
+ representa o nome do editor texto do GNU/linux.
+\end_layout
+
+\begin_layout Itemize
+atributo nome_editor_texto_windows:
+ representa o nome do editor texto do windows.
+\end_layout
+
+\begin_layout Itemize
+atributo tipo_programa:
+ representa o tipo de programa.
+\end_layout
+
+\begin_layout Itemize
+atributo opcao:
+ representa a opção selecionada pelo usuário no menu.
+\end_layout
+
+\begin_layout Itemize
+método opcao_abrir_DT():
+ método para abrir diretório.
+\end_layout
+
+\begin_layout Itemize
+método opcao_abrir_DT(int):
+ método para abrir diretório.
+\end_layout
+
+\begin_layout Itemize
+método opcao_programa(string,
+ string):
+ método para a troca do explorador e do editor de texto.
+\end_layout
+
+\begin_layout Itemize
+método opcao_programa(string):
+ método para a troca do explorador
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+CHeader:
+ representa a classe que implementa os cabeçalhos.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo status_usuario:
+ representa o status que aparecerá na tela de acordo com o tipo de usuário.
+\end_layout
+
+\begin_layout Itemize
+atributo i:
+ contador.
+\end_layout
+
+\begin_layout Itemize
+atributo largura:
+ vetor de largura do retângulo do titulo.
+\end_layout
+
+\begin_layout Itemize
+método header_carregando():
+ referente à animação de carregamento do programa.
+\end_layout
+
+\begin_layout Itemize
+método header_titulo(int):
+ escreve titulo do programa.
+\end_layout
+
+\begin_layout Itemize
+método header_inicio():
+ escreve subtítulo do programa.
+\end_layout
+
+\begin_layout Itemize
+método header_banco_de_dados():
+ escreve subtítulo de listar amostras.
+\end_layout
+
+\begin_layout Itemize
+método header_banco_de_dados_lista_de_amostras():
+ escreve subtítulo de amostras listadas.
+\end_layout
+
+\begin_layout Itemize
+método header_banco_de_dados_exibir_amostras():
+ escreve subtitulo de exibir amostras.
+\end_layout
+
+\begin_layout Itemize
+método header_banco_de_dados_pesquisa_de_amostras():
+ escreve subtitulo de amostras listadas.
+\end_layout
+
+\begin_layout Itemize
+método header_banco_de_dados_inserir_amostras():
+ escreve subtitulo de inserir amostras.
+\end_layout
+
+\begin_layout Itemize
+método header_banco_de_dados_excluir_amostras():
+ escreve subtitulo de excluir amostras.
+\end_layout
+
+\begin_layout Itemize
+método header_banco_de_dados_exportar_amostras():
+ escreve subtitulo de excluir amostras.
+\end_layout
+
+\begin_layout Itemize
+método header_banco_de_dados_informacao_amostras():
+ escreve subtitulo de informações de amostras.
+\end_layout
+
+\begin_layout Itemize
+método header_configuracoes():
+ escreve subtitulo de configurações.
+\end_layout
+
+\begin_layout Itemize
+método header_menu_abre_DT():
+ escreve subtitulo do menu abrir diretório.
+\end_layout
+
+\begin_layout Itemize
+método header_menu_abre_bd():
+ escreve subtitulo do menu banco de dados.
+\end_layout
+
+\begin_layout Itemize
+método header_tipo_usuario():
+ escreve subtitulo do menu.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Diagrama de Sequência
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Mensagens
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de sequência
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de sequência"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\emph on
+O diagrama de sequência enfatiza a troca de eventos e mensagens e sua ordem temporal.
+ Contém informações sobre o fluxo de controle do programa.
+ Estabelece o relacionamento dos atores (usuários e sistemas externos) com alguns objetos do sistema.
+\end_layout
+
+\begin_layout Standard
+Veja o 
+\shape italic
+\emph on
+diagrama de sequência na
+\shape default
+\emph default
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-sequencia:Listar Fluidos de Perfuração"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagramadesequencia.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de seqüência:
+ Listar Fluidos de Perfuração
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-sequencia:Listar Fluidos de Perfuração"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagramadesequencia2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Sequência:
+ Pesquisar Fluidos com propriedades específicas
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Sequência:Pesquisar Fluidos com propriedades específicas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagramadesequencia3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama se Sequência:
+ Inserir Novo Fluido ao banco de Dados
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-se-Sequência:Inserir Novo Fluido ao banco de Dados"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de Colaboração
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de colaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Diagrama-de-colaboração:"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+O diagrama de colaboração pode ser desenvolvido como uma extensão do diagrama de caso de uso,
+ detalhando o mesmo por meio da inclusão de objetos,
+ mensagens e parâmetros trocados entre objetos.
+ O principal objetivo deste diagrama é a interação e a troca de mensagens e dados entre os objetos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imagens/Diagramadecolaboração.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de colaboração:
+ acessando o banco de dados.
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-colaboração"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de Máquina de Estado
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de máquina de estado
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de estados"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um diagrama de máquina de estado representa os diversos estados que o objeto assume e os eventos que ocorrem ao longo de sua vida ou mesmo ao longo de um processo (histórico do objeto).
+ É usado para modelar aspectos dinâmicos do objeto.
+ Existem basicamente dois usos para máquinas de estado:
+ máquinas de estado comportamentais e máquinas de estado para protocolos.
+ 
+\end_layout
+
+\begin_layout Standard
+Máquinas de estado comportamentais podem ser utilizadas para especificar o comportamento de vários tipos de elementos.
+ Por exemplo,
+ podem ser utilizadas para modelar o comportamento de entidades individuais (objetos),
+ por meio da modificação dos valores de seus atributos.
+ 
+\end_layout
+
+\begin_layout Standard
+Máquinas de estado para protocolos expressam as transições legais que um objeto pode desenvolver.
+ Com seu uso,
+ pode-se definir o ciclo de vida de objetos,
+ ou uma determina ordem na invocação de suas operações.
+ Para este tipo de máquina de estado,
+ interfaces e portas podem estar associados.
+ 
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-maquina-de-estado"
+nolink "false"
+
+\end_inset
+
+ o diagrama de máquina de estado para o banco de dados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imagens/Diagramadeestado.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de máquina de estado:
+ classe CBancodeDados
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-maquina-de-estado"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de Atividades
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de atividades
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de atividades é um diagrama UML utilizado para modelar o aspecto comportamental de processos.
+ Neste diagrama,
+ uma atividade é modelada como uma sequência estruturada de ações controladas por nós de decisão e sincronismo.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imagens/Diagrama_atividades.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de atividades:
+ Classe CBancodeDados:
+ listar_amostra(vector<CFluidodePerfuracao>,
+ int).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-atividades"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
